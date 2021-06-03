@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family:'Open Sans',sans-serif;
+  font-family:'Roboto',sans-serif;
+}
+a{
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+body{
+  height: 100vh;
+  display: flex;
+  background: #FFC300;
+  text-decoration: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+.container{
+  position: relative;
+  width: 65%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url(pza.jpg) no-repeat right/cover;
+  background-blend-mode: overlay;
+  z-index: -1;
+}
+.reg{
+  opacity: 1;
+  z-index: 1;
+  position: absolute;
+  top: 45%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 500px;
+  border-radius: 10px;
+  background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
+  padding: 30px 40px;
+  box-shadow: -2px -2px 5px rgba(200, 200, 200, 0.5), 
+                4px 4px 8px rgba(0, 0, 0, 0.2);
+} 
+.content{
+  opacity: 1;
+  z-index: 999;
+}
+/* heading*/
+.reg h3{
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+/*email id and password*/
+.text{
+position: relative;
+margin: 25px 0 18px 0; 
+height: 50px;
+width: 100%
+}
+.text input{
+  height: 90%;
+  width: 100%;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  border-radius: 10px;
+  border: 1px solid silver;
+  padding: 0 15px;
+  color: #000;
+  outline: none;
+  transition: .4s;
+  background: transparent;
+  margin-bottom: 10px;
+}
+.text label{
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  position: absolute;
+  top: 20%;
+  left: 15px;
+  color: #999;
+  pointer-events: none;
+  transition: .5s;
+}
+.text input:focus ~ label,
+.text input:valid ~ label{
+  transform: translateY(-20px);
+  left: 10px;
+  background: transparent;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #ff0000;
+}
+.text input:focus{
+}
+
+/*signin button*/
+.btn{
+margin-bottom: 1px;
+height: 40px;
+width: 100%;
+color: #fff;
+background: #FFC300;
+box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.2), 
+                2px 2px 5px rgba(0, 0, 0, 0.3);
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+display: block;
+text-transform: uppercase;
+letter-spacing: 2px;
+border-radius: 10px;
+border: none;
+outline: none;
+transition: 0.5s ease-out;
+}
+
+.btn:hover{
+ background: transparent;
+ box-shadow: -2px -2px 5px rgba(200, 200, 200, 0.5), 
+           2px 2px 5px rgba(0, 0, 0, 0.3);color: #ff0000;
+ transition: 0.3s ease-in-out;
+}
+
+/*signup_link*/
+
+.log_link{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  left:50%;
+  letter-spacing: 0.3px;
+  color: #555;
+}
+.log_link a{
+  font-weight: bold;
+  font-family: roboto;
+  margin: 3px;
+  color: #ff0000;
+  text-decoration: underline;
+}
+.log_link a:hover{
+  color: #333;
+}
+
+
+
+.sec1{
+  height: 7vh;
+  margin-top: 30px; 
+  width: 130%;
+  position: relative;
+  right: 40px;
+  background: #f0281a;
+}
+.sec2{
+  height: 8vh;
+  width: 130%;
+  position: relative;
+  right: 40px;
+  background: #f0281a;
+  border-radius: 10px;
+}
+.sec2:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -48px;
+  width: 100%;
+  height: 48px;
+  background: #f0281a;
+  transform: skewY(15deg);
+}
+.sec2:after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -48px;
+  width: 100%;
+  height: 48px;
+  background: #f0281a;
+  transform: skewY(-15deg);
+}
